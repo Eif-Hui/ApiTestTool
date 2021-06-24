@@ -7,7 +7,7 @@ from common import operMysql
 
 current_module_path = os.path.dirname(__file__)
 yaml_dir = current_module_path + '/data/'
-case_dir = current_module_path + '/test_case/'
+case_dir = current_module_path + '/test/'
 
 # 数据库配置
 db_msg = {
