@@ -1,0 +1,19 @@
+---
+tests:
+- case_desc: 用例描述
+  method: POST
+  url: /deepexi-daas-security/api/v1/users/login
+  headers: { "Accept": "application/json, text/plain, */*"}
+  json: {"username":"xiewenhui@daastest","channel":"pc","password":"abcd1234"}
+  verification: $.msg=ok;$.code=0
+  jsonpath_exp: token=$.payload.access_token;tenantId=$.payload.userInfo.tenantId;userId=$.payload.userInfo.userId
+  regular_exp:
+
+- case_desc: 采集任务列表查询1
+  method: GET
+  url: /deepexi-daas-metadata2/api/v1/task/search
+  headers: { "Accept": "application/json, text/plain, */*","Authorization": "Bearer ${token}"}
+  data: {"size": 100,"page": 1,"tenantId": "${tenantId}","userId": "${userId}"}
+  verification: $.msg=ok;$.code=0
+  jsonpath_exp: taskId=$.payload.content[0].id;searchId=$.payload.content[?(@.status==7)].id
+  regular_exp:
