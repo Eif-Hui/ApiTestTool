@@ -21,7 +21,7 @@ def pytest_run():
     os.popen(cmd).read().strip()  # 运行终端命令
 
 
-# Press the green button in the gutter to run the script.
+# Press the green button in the gutter to run the script.44
 if __name__ == '__main__':
     pytest_run()
 
