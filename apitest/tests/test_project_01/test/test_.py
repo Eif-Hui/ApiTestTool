@@ -6,19 +6,19 @@
 import pytest
 from common.mainTest import BaseRequests as R
 from tests.test_project_01 import *
+
+
 # from config.setting import *
 
 
-class Test:
-
-    @pytest.mark.datafile(yaml_dir + 'test_demo.yaml')
-    def test_(self, parameters: dict):
-        url = TEST_HOST + parameters.pop("url")
-        method = parameters.pop("method")
-        case_desc = parameters.pop("case_desc")
-        variables = parameters.pop('jsonpath_exp')
-        verification = parameters.pop('verification')
-        R.send_request(method, url, case_desc=case_desc, verification=verification, jsonpath_exp=variables,  **parameters)
+@pytest.mark.datafile(yaml_dir + 'test_demo.yaml')
+def test_(parameters: dict):
+    url = TEST_HOST + parameters.pop("url")
+    method = parameters.pop("method")
+    case_desc = parameters.pop("case_desc")
+    variables = parameters.pop('jsonpath_exp')
+    verification = parameters.pop('verification')
+    R.send_request(method, url, case_desc=case_desc, verification=verification, jsonpath_exp=variables, **parameters)
 
 
 if __name__ == '__main__':
