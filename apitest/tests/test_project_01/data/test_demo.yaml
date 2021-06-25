@@ -1,6 +1,6 @@
 ---
 tests:
-- case_desc: 用例描述
+- case_desc: login登陆
   method: POST
   url: /deepexi-daas-security/api/v1/users/login
   headers: { "Accept": "application/json, text/plain, */*"}

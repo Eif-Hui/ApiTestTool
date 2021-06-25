@@ -1,5 +1,69 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "tests.test_project_01.test",
+    "children" : [ {
+      "name" : "test_",
+      "children" : [ {
+        "name" : "test_[login登陆]",
+        "uid" : "559c484cbcb8b0d8",
+        "parentUid" : "87948fe3cc846bbbdfd01b245d5b0b1d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1624584639678,
+          "stop" : 1624584639966,
+          "duration" : 288
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'case_desc': 'login登陆', 'method': 'POST', 'url': '/deepexi-daas-security/api/v1/users/login', 'headers': {'Accept': 'application/json, text/plain, */*'}, 'json': {'username': 'xiewenhui@daastest', 'channel': 'pc', 'password': 'abcd1234'}, 'verification': '$.msg=ok;$.code=0', 'jsonpath_exp': 'token=$.payload.access_token;tenantId=$.payload.userInfo.tenantId;userId=$.payload.userInfo.userId', 'regular_exp': None}" ]
+      }, {
+        "name" : "test_[采集任务列表查询1]",
+        "uid" : "38582cdc1068945d",
+        "parentUid" : "87948fe3cc846bbbdfd01b245d5b0b1d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1624584639970,
+          "stop" : 1624584640285,
+          "duration" : 315
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'case_desc': '采集任务列表查询1', 'method': 'GET', 'url': '/deepexi-daas-metadata2/api/v1/task/search', 'headers': {'Accept': 'application/json, text/plain, */*', 'Authorization': 'Bearer ${token}'}, 'data': {'size': 100, 'page': 1, 'tenantId': '${tenantId}', 'userId': '${userId}'}, 'verification': '$.msg=ok;$.code=0', 'jsonpath_exp': 'taskId=$.payload.content[0].id;searchId=$.payload.content[?(@.status==7)].id', 'regular_exp': None}" ]
+      } ],
+      "uid" : "87948fe3cc846bbbdfd01b245d5b0b1d"
+    }, {
+      "name" : "test_collection",
+      "children" : [ {
+        "name" : "test_collection[用例描述]",
+        "uid" : "adf0b0e77f16e463",
+        "parentUid" : "99037b03857c8b524ef1dc894f61341d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1624584640288,
+          "stop" : 1624584640359,
+          "duration" : 71
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'case_desc': '用例描述', 'method': 'POST', 'url': '/deepexi-daas-security/api/v1/users/login', 'headers': {'Accept': 'application/json, text/plain, */*'}, 'json': {'username': 'xiewenhui@daastest', 'channel': 'pc', 'password': 'abcd1234'}, 'verification': '$.msg=ok;$.code=0', 'jsonpath_exp': 'token=$.payload.access_token;tenantId=$.payload.userInfo.tenantId;userId=$.payload.userInfo.userId', 'regular_exp': None}" ]
+      }, {
+        "name" : "test_collection[采集任务列表查询1]",
+        "uid" : "d5a152e4cce295e2",
+        "parentUid" : "99037b03857c8b524ef1dc894f61341d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1624584640362,
+          "stop" : 1624584640512,
+          "duration" : 150
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'case_desc': '采集任务列表查询1', 'method': 'GET', 'url': '/deepexi-daas-metadata2/api/v1/task/search', 'headers': {'Accept': 'application/json, text/plain, */*', 'Authorization': 'Bearer ${token}'}, 'data': {'size': 100, 'page': 1, 'tenantId': '${tenantId}', 'userId': '${userId}'}, 'verification': '$.msg=ok;$.code=0', 'jsonpath_exp': 'taskId=$.payload.content[0].id;searchId=$.payload.content[?(@.status==7)].id', 'regular_exp': None}" ]
+      } ],
+      "uid" : "99037b03857c8b524ef1dc894f61341d"
+    } ],
+    "uid" : "d0842eaf55f9c3b5b1246b3e8e7329e3"
+  } ],
   "name" : "suites"
 }

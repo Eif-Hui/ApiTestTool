@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Jun 25 09:30:40 CST 2021","Fri Jun 25 09:30:40 CST 2021","71","tests.test_project_01.test","test_collection","","","","test_collection[用例描述]",""
+"passed","Fri Jun 25 09:30:39 CST 2021","Fri Jun 25 09:30:40 CST 2021","315","tests.test_project_01.test","test_","","","","test_[采集任务列表查询1]",""
+"passed","Fri Jun 25 09:30:39 CST 2021","Fri Jun 25 09:30:39 CST 2021","288","tests.test_project_01.test","test_","","","","test_[login登陆]",""
+"passed","Fri Jun 25 09:30:40 CST 2021","Fri Jun 25 09:30:40 CST 2021","150","tests.test_project_01.test","test_collection","","","","test_collection[采集任务列表查询1]",""

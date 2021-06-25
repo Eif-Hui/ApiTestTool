@@ -99,6 +99,7 @@ class RequestUtil(requests.Session):
         EXPR = r'\$\{(.*?)\}'
         keys = re.findall(EXPR, str(target))
         if keys:
+            logger.info("*** processing parameters ***".center(80, "-"))
             logger.info(f"变量池中匹配到需替换的参数: {keys}")
         for key in keys:
             value = self.variable_pool.get(key)

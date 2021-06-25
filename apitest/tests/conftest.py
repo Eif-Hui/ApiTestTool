@@ -26,7 +26,6 @@ def pytest_generate_tests(metafunc):
     if "parameters" in metafunc.fixturenames:
         for data in test_data['tests']:
             ids.append(data['case_desc'])
-
         metafunc.parametrize("parameters", test_data['tests'], ids=ids, scope="function")
 
 
@@ -37,3 +36,19 @@ def pytest_collection_modifyitems(
     for item in items:
         item.name = item.name.encode("utf-8").decode("unicode-escape")
         item._nodeid = item._nodeid.encode("utf-8").decode("unicode-escape")
+
+
+# def pytest_runtest_makereport(item, call):
+#     """　　返回一个_pytest.runner.TestReport类对象
+#     每个测试用例执行后，制作测试报告
+#     :param item:测试用例对象
+#     :param call:测试用例的测试步骤， 　　_pytest.runner.CallInfo对象　　
+#                 先执行when=’setup’ 返回setup 的执行结果
+#                 然后执行when=’call’ 返回call 的执行结果
+#                 最后执行when=’teardown’返回teardown 的执行结果
+#     :return:
+#     """
+#     print(item)
+#     print(call)
+#     print(call.when)
+#     print(call.result)

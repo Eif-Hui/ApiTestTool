@@ -1,1 +1,41 @@
-[ ]
+[ {
+  "uid" : "adf0b0e77f16e463",
+  "name" : "test_collection[用例描述]",
+  "time" : {
+    "start" : 1624584640288,
+    "stop" : 1624584640359,
+    "duration" : 71
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "38582cdc1068945d",
+  "name" : "test_[采集任务列表查询1]",
+  "time" : {
+    "start" : 1624584639970,
+    "stop" : 1624584640285,
+    "duration" : 315
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "559c484cbcb8b0d8",
+  "name" : "test_[login登陆]",
+  "time" : {
+    "start" : 1624584639678,
+    "stop" : 1624584639966,
+    "duration" : 288
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d5a152e4cce295e2",
+  "name" : "test_collection[采集任务列表查询1]",
+  "time" : {
+    "start" : 1624584640362,
+    "stop" : 1624584640512,
+    "duration" : 150
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
